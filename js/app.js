@@ -1,56 +1,97 @@
-// ===============================
-// FITQUEST v1.0
-// Main Application
-// ===============================
+// ===================================
+// FitQuest Official NAPFA Standards
+// Female (Secondary) Ages 12–19
+// Version 1.0
+// ===================================
 
-document.addEventListener("DOMContentLoaded", () => {
+const napfaData = {
+  female: {
+    12: {
+      situps: [
+        { points: 5, min: 30, max: Infinity },
+        { points: 4, min: 25, max: 29 },
+        { points: 3, min: 21, max: 24 },
+        { points: 2, min: 17, max: 20 },
+        { points: 1, min: 13, max: 16 },
+        { points: 0, min: 0, max: 12 }
+      ]
+    },
 
-    // Automatically set today's date
-    const today = new Date().toISOString().split("T")[0];
-    document.getElementById("assessmentDate").value = today;
+    13: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 26, max: 30 },
+        { points: 3, min: 22, max: 25 },
+        { points: 2, min: 18, max: 21 },
+        { points: 1, min: 14, max: 17 },
+        { points: 0, min: 0, max: 13 }
+      ]
+    },
 
-    // Calculate button
-    document
-        .getElementById("calculateBtn")
-        .addEventListener("click", calculateAssessment);
+    14: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 28, max: 30 },
+        { points: 3, min: 24, max: 27 },
+        { points: 2, min: 20, max: 23 },
+        { points: 1, min: 16, max: 19 },
+        { points: 0, min: 0, max: 15 }
+      ]
+    },
 
-});
+    15: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 29, max: 30 },
+        { points: 3, min: 25, max: 28 },
+        { points: 2, min: 21, max: 24 },
+        { points: 1, min: 17, max: 20 },
+        { points: 0, min: 0, max: 16 }
+      ]
+    },
 
-function calculateAssessment() {
+    16: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 29, max: 30 },
+        { points: 3, min: 26, max: 28 },
+        { points: 2, min: 22, max: 25 },
+        { points: 1, min: 18, max: 21 },
+        { points: 0, min: 0, max: 17 }
+      ]
+    },
 
-    // Student information
-    const name = document.getElementById("studentName").value.trim();
+    17: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 29, max: 30 },
+        { points: 3, min: 27, max: 28 },
+        { points: 2, min: 23, max: 26 },
+        { points: 1, min: 19, max: 22 },
+        { points: 0, min: 0, max: 18 }
+      ]
+    },
 
-    if (name === "") {
-        alert("Please enter the student's name.");
-        return;
+    18: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 29, max: 30 },
+        { points: 3, min: 27, max: 28 },
+        { points: 2, min: 24, max: 26 },
+        { points: 1, min: 20, max: 23 },
+        { points: 0, min: 0, max: 19 }
+      ]
+    },
+
+    19: {
+      situps: [
+        { points: 5, min: 31, max: Infinity },
+        { points: 4, min: 29, max: 30 },
+        { points: 3, min: 27, max: 28 },
+        { points: 2, min: 24, max: 26 },
+        { points: 1, min: 21, max: 23 },
+        { points: 0, min: 0, max: 20 }
+      ]
     }
-
-    // Read values
-    const situps = Number(document.getElementById("situps").value);
-    const sitreach = Number(document.getElementById("sitreach").value);
-    const broadjump = Number(document.getElementById("broadjump").value);
-    const pullups = Number(document.getElementById("pullups").value);
-    const shuttle = Number(document.getElementById("shuttle").value);
-    const runMin = Number(document.getElementById("runMin").value);
-    const runSec = Number(document.getElementById("runSec").value);
-
-    // Temporary scoring
-    // (Official scoring engine comes next)
-
-    let completed = 0;
-
-    if (!isNaN(situps) && situps > 0) completed++;
-    if (!isNaN(sitreach) && sitreach > 0) completed++;
-    if (!isNaN(broadjump) && broadjump > 0) completed++;
-    if (!isNaN(pullups) && pullups > 0) completed++;
-    if (!isNaN(shuttle) && shuttle > 0) completed++;
-    if (!isNaN(runMin) && !isNaN(runSec)) completed++;
-
-    document.getElementById("totalScore").textContent =
-        completed + " / 6 Stations Entered";
-
-    document.getElementById("award").textContent =
-        "Calculating...";
-
-}
+  }
+};
