@@ -1,1 +1,149 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>FitQuest</title><link rel='stylesheet' href='css/style.css'><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'></head><body><header><div class='container'><h1>🌿 FitQuest</h1><p>School Physical Fitness Assessment System</p></div></header><section class='hero'><div class='container'><h2>Train. Track. Thrive.</h2><p>Helping every student achieve their personal best.</p></div></section><section class='container'><div class='card'><h2>Student Information</h2><label>Student Name</label><input id='name'><button id='startBtn'>Start Assessment</button></div></section><script src='js/app.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitQuest</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="container">
+
+        <h1>🌿 FitQuest</h1>
+
+        <p>School Physical Fitness Assessment System</p>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Student Information</h2>
+
+        <div class="grid">
+
+            <div>
+                <label>Student Name</label>
+                <input type="text" id="studentName">
+            </div>
+
+            <div>
+                <label>Class</label>
+                <input type="text" id="studentClass">
+            </div>
+
+            <div>
+                <label>Age</label>
+
+                <select id="age">
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                </select>
+
+            </div>
+
+            <div>
+                <label>Gender</label>
+                <input type="text" value="Female" disabled>
+            </div>
+
+            <div>
+                <label>Assessment Date</label>
+                <input type="date" id="assessmentDate">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>NAPFA Assessment</h2>
+
+        <div class="grid">
+
+            <div>
+                <label>Sit-ups (reps)</label>
+                <input type="number" id="situps">
+            </div>
+
+            <div>
+                <label>Sit & Reach (cm)</label>
+                <input type="number" id="sitreach">
+            </div>
+
+            <div>
+                <label>Standing Broad Jump (cm)</label>
+                <input type="number" id="broadjump">
+            </div>
+
+            <div>
+                <label>Inclined Pull-ups (reps)</label>
+                <input type="number" id="pullups">
+            </div>
+
+            <div>
+                <label>Shuttle Run (seconds)</label>
+                <input type="number" step="0.1" id="shuttle">
+            </div>
+
+            <div>
+                <label>2.4 km Run</label>
+
+                <div class="time-input">
+
+                    <input type="number" placeholder="Min" id="runMin">
+
+                    <input type="number" placeholder="Sec" id="runSec">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button id="calculateBtn">
+
+            Calculate Results
+
+        </button>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Results</h2>
+
+        <p><strong>Award:</strong> <span id="award">--</span></p>
+
+        <p><strong>Total Score:</strong> <span id="totalScore">--</span></p>
+
+        <p><strong>Status:</strong> Ready for calculation.</p>
+
+    </section>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
