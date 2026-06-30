@@ -249,10 +249,65 @@ js/app.js
 console.log("FitQuest SMSS Loaded Successfully!");
 js/navigation.js
 js/ui.js
-modules/calculator.js
-modules/awards.js
-modules/recommendations.js
-modules/validation.js
+modules/
+calculator.js
+/*
+=====================================
+FitQuest SMSS Calculator Engine
+Version 1.0
+=====================================
+*/
+
+class NapfaCalculator {
+
+    constructor(scoreData) {
+        this.scoreData = scoreData;
+    }
+
+    getStationScore(age, station, value) {
+
+        if (!this.scoreData[age]) {
+            throw new Error("Age not found.");
+        }
+
+        if (!this.scoreData[age][station]) {
+            throw new Error("Station not found.");
+        }
+
+        const rules = this.scoreData[age][station];
+
+        return this.lookupScore(rules, value);
+
+    }
+
+    lookupScore(rules, value) {
+
+        /*
+        We will replace this with the
+        official lookup algorithm once
+        the official tables are loaded.
+        */
+
+        return 0;
+
+    }
+
+    calculateTotal(results){
+
+        let total = 0;
+
+        Object.values(results).forEach(score=>{
+            total += score;
+        });
+
+        return total;
+
+    }
+
+}
+awards.js
+recommendations.js
+validation.js
 
 css/
     variables.css
