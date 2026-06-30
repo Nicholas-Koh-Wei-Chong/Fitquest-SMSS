@@ -1,347 +1,94 @@
-Fitquest-SMSS
-
-│
-├── index.html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>FitQuest | School Physical Fitness Assessment</title>
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 
-<title>FitQuest SMSS</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
 
-<div class="container">
+    <div class="container">
 
-<h2>🌿 FitQuest SMSS</h2>
+        <h1>🌿 FitQuest</h1>
 
-<p>Physical Fitness Assessment System</p>
+        <p>School Physical Fitness Assessment System</p>
 
-</div>
+    </div>
 
 </header>
 
-<section class="container hero">
+<section class="hero">
 
-<div class="hero-text">
+    <div class="container">
 
-<h1>Train. Track. Thrive.</h1>
+        <h2>Train. Track. Thrive.</h2>
 
-<p>
+        <p>
 
-Empowering every student to achieve their personal best through accurate fitness assessment, meaningful progress tracking, and personalised training recommendations.
+            Helping every student achieve their personal best through accurate NAPFA assessment, progress tracking and personalised fitness recommendations.
 
-</p>
+        </p>
 
-<a href="#" class="button">
-
-Start Assessment
-
-</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="https://placehold.co/450x350?text=FitQuest+Illustration" alt="Illustration">
-
-</div>
+    </div>
 
 </section>
 
 <section class="container">
 
-<div class="card">
+    <div class="card">
 
-<h2>Coming in Version 1.0</h2>
+        <h2>Student Information</h2>
 
-<ul>
+        <form id="assessmentForm">
 
-<li>✔ Female NAPFA Calculator</li>
+            <label>Student Name</label>
 
-<li>✔ Award Prediction</li>
+            <input type="text" id="name">
 
-<li>✔ Personalised Training Recommendations</li>
+            <label>Class</label>
 
-<li>✔ Progress Dashboard</li>
+            <input type="text" id="studentClass">
 
-<li>✔ Teacher Portal</li>
+            <label>Age</label>
 
-</ul>
+            <select id="age">
 
-</div>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+
+            </select>
+
+            <label>Gender</label>
+
+            <input type="text" value="Female" disabled>
+
+            <button type="button" id="startBtn">
+
+                Start Assessment
+
+            </button>
+
+        </form>
+
+    </div>
 
 </section>
 
 <script src="js/app.js"></script>
 
 </body>
-
 </html>
-
-css/variables.css
-/* ===========================
-   FITQUEST SMSS DESIGN SYSTEM
-=========================== */
-
-:root{
-
-    --primary:#2E7D32;
-    --primary-dark:#1B5E20;
-    --primary-light:#66BB6A;
-
-    --background:#F8FAF8;
-
-    --white:#FFFFFF;
-
-    --card:#FFFFFF;
-
-    --text:#263238;
-
-    --grey:#607D8B;
-
-    --border:#E0E0E0;
-
-    --success:#43A047;
-
-    --warning:#FBC02D;
-
-    --danger:#E53935;
-
-    --radius:16px;
-
-    --shadow:0 10px 30px rgba(0,0,0,.08);
-
-}
-css/style.css
-@import url("variables.css");
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    background:var(--background);
-
-    color:var(--text);
-
-    line-height:1.6;
-
-}
-
-header{
-
-    background:var(--primary);
-
-    color:white;
-
-    padding:20px;
-
-    box-shadow:var(--shadow);
-
-}
-
-.container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:auto;
-
-}
-
-.hero{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:80px 0;
-
-    flex-wrap:wrap;
-
-}
-
-.hero-text{
-
-    flex:1;
-
-    min-width:300px;
-
-}
-
-.hero h1{
-
-    font-size:52px;
-
-    margin-bottom:20px;
-
-}
-
-.hero p{
-
-    font-size:20px;
-
-    color:var(--grey);
-
-    margin-bottom:30px;
-
-}
-
-.button{
-
-    display:inline-block;
-
-    padding:15px 28px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    background:var(--primary);
-
-    color:white;
-
-    font-weight:600;
-
-}
-
-.card{
-
-    background:white;
-
-    border-radius:var(--radius);
-
-    padding:25px;
-
-    box-shadow:var(--shadow);
-
-    margin-top:25px;
-
-}
-css/animations.css
-js/app.js
-console.log("FitQuest SMSS Loaded Successfully!");
-js/navigation.js
-js/ui.js
-modules/
-calculator.js
-/*
-=====================================
-FitQuest SMSS Calculator Engine
-Version 1.0
-=====================================
-*/
-
-class NapfaCalculator {
-
-    constructor(scoreData) {
-        this.scoreData = scoreData;
-    }
-
-    getStationScore(age, station, value) {
-
-        if (!this.scoreData[age]) {
-            throw new Error("Age not found.");
-        }
-
-        if (!this.scoreData[age][station]) {
-            throw new Error("Station not found.");
-        }
-
-        const rules = this.scoreData[age][station];
-
-        return this.lookupScore(rules, value);
-
-    }
-
-    lookupScore(rules, value) {
-
-        /*
-        We will replace this with the
-        official lookup algorithm once
-        the official tables are loaded.
-        */
-
-        return 0;
-
-    }
-
-    calculateTotal(results){
-
-        let total = 0;
-
-        Object.values(results).forEach(score=>{
-            total += score;
-        });
-
-        return total;
-
-    }
-
-}
-awards.js
-recommendations.js
-validation.js
-
-css/
-    variables.css
-    style.css
-
-js/
-├── calculator.js
-├── awards.js
-├── recommendations.js
-├── validation.js
-
-data/
-└── female.json
-
-├── js
-│     ├── app.js
-│     └── navigation.js
-│
-├── pages
-│
-├── assets
-│     ├── images
-│     ├── icons
-│     ├── badges
-│     ├── avatars
-│     └── videos
-│
-├── firebase
-│
-js/
-├── calculator.js
-├── awards.js
-├── recommendations.js
-├── validation.js
-
-data/
-└── female.json
